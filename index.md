@@ -2,7 +2,13 @@
 layout: default
 title: "Home"
 ---
+
 # Welcome to My GitHub Pages App
 
-- [Folder 1](./folder1/)
-- [Folder 2](./folder2/)
+This application automatically displays Markdown files from multiple folders.
+
+<ul>
+  {% for folder in site.folders %}
+    <li><a href="{{ folder.url }}">{{ folder.title }}</a></li>
+  {% endfor %}
+</ul>
