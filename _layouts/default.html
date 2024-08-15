@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">">
-  <title>{{ page.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-  </header>
-
-  <main>
-    <article>
-      {{ content }}
-    </article>
-  </main>
-
-  <footer>
-    <p>© 2024 My GitHub Pages Application</p>
-  </footer>
+    <div class="container">
+        <div class="navbar">
+            <h2>Folders</h2>
+            <ul>
+                <li>
+                    <button class="dropdown-btn">Folder 1</button>
+                    <div class="dropdown-container">
+                        <a href="{{ '/folder1/file1' | relative_url }}">File 1</a>
+                        <a href="{{ '/folder1/file2' | relative_url }}">File 2</a>
+                    </div>
+                </li>
+                <li>
+                    <button class="dropdown-btn">Folder 2</button>
+                    <div class="dropdown-container">
+                        <a href="{{ '/folder2/file3' | relative_url }}">File 3</a>
+                        <a href="{{ '/folder2/file4' | relative_url }}">File 4</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+    <script src="{{ '/assets/script.js' | relative_url }}"></script>
 </body>
 </html>

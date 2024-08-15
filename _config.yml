@@ -1,8 +1,4 @@
-title: "My GitHub Pages Application"
-description: "An app to display markdown files from multiple folders"
-theme: jekyll-theme-cayman
+title: "My Markdown Pages"
+baseurl: ""
+theme: minima
 markdown: kramdown
-collections:
-  folders:
-    output: true
-    permalink: /:collection/:path/
